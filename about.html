@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
@@ -84,10 +83,6 @@
                 padding-left: 15px;
                 padding-right: 15px
             }
-        }
-
-        .bg-light {
-            background-color: #f2f2f2
         }
 
         .bg-dark {
@@ -534,7 +529,11 @@
         }
 
         .section_pt {
-            padding-top: 100
+            padding-top: 200px
+        }
+
+        .section_pb {
+            padding-bottom: 200px
         }
 
         .section__headline {
@@ -545,14 +544,16 @@
             margin-bottom: 10px
         }
 
-        .section_h-800 {
-            height: 800px;
+        .section_h-700 {
+            height: 700px;
             max-height: 100vh
         }
 
-        .section_h-900 {
-            height: 900px;
-            max-height: 100vh
+        .section_w-container-right {
+            max-width: 100%;
+            width: calc(100% - ((100vw - 1140px)/ 2) - 25px);
+            margin-left: auto;
+            text-align: left
         }
 
         @media screen and (max-width:1200px) {
@@ -560,14 +561,27 @@
                 padding-top: 140px
             }
 
+            .section_pb {
+                padding-bottom: 140px
+            }
+
             .section__headline {
                 max-width: 80px
+            }
+
+            .section_w-container-right {
+                width: 100%;
+                text-align: center
             }
         }
 
         @media screen and (max-width:991px) {
             .section_pt {
                 padding-top: 100px
+            }
+
+            .section_pb {
+                padding-bottom: 100px
             }
         }
 
@@ -576,15 +590,15 @@
                 padding-top: 80px
             }
 
+            .section_pb {
+                padding-bottom: 80px
+            }
+
             .section__headline {
                 max-width: 50px
             }
 
-            .section_h-800 {
-                max-height: 70vh
-            }
-
-            .section_h-900 {
+            .section_h-700 {
                 max-height: 70vh
             }
         }
@@ -603,52 +617,8 @@
             margin-bottom: .5em
         }
 
-        .section-masthead__wrapper-property {
-            margin-right: 70px;
-            margin-bottom: 70px
-        }
-
-        .section-masthead__wrapper-property:last-of-type {
-            margin-right: 0
-        }
-
-        .section-masthead__properties {
-            margin-top: 70px;
-            margin-bottom: -70px
-        }
-
-        .section-masthead__background_bottom {
+        .section-masthead__header h2 {
             margin-top: 100px
-        }
-
-        @media screen and (max-width:1200px) {
-            .section-masthead__wrapper-property {
-                margin-right: 30px
-            }
-
-            .section-masthead__background_bottom {
-                margin-top: 80px
-            }
-        }
-
-        @media screen and (max-width:991px) {
-            .section-masthead__wrapper-property {
-                margin-right: 0
-            }
-
-            .section-masthead__wrapper-property {
-                margin-bottom: 30px
-            }
-
-            .section-masthead__properties {
-                margin-top: 30px;
-                margin-bottom: -30px
-            }
-
-            .section-masthead__background_bottom {
-                width: 100%;
-                margin-top: 80px
-            }
         }
 
         @media screen and (max-width:767px) {
@@ -656,8 +626,9 @@
                 margin-top: 40px
             }
 
-            .section-masthead__background_bottom {
-                margin-top: 60px
+            .section-masthead__header h2 {
+                margin-top: 30px;
+                font-size: 21px
             }
         }
 
@@ -776,7 +747,8 @@
             height: 1px
         }
 
-        h1 {
+        h1,
+        h2 {
             font-family: Poppins, sans-serif
         }
 
@@ -790,12 +762,26 @@
             line-height: 1.59
         }
 
+        h2 {
+            font-size: 33px;
+            font-weight: 600;
+            line-height: 1.5
+        }
+
         h6 {
             font-size: 16px;
             font-weight: 500;
             line-height: 1.5;
             letter-spacing: 1px;
             text-transform: uppercase
+        }
+
+        strong {
+            font-weight: 600
+        }
+
+        .heading-light {
+            font-weight: 300
         }
 
         a {
@@ -808,6 +794,10 @@
                 font-size: 43px
             }
 
+            h2 {
+                font-size: 26px
+            }
+
             h6 {
                 font-size: 16px
             }
@@ -816,6 +806,10 @@
         @media screen and (max-width:991px) {
             h1 {
                 font-size: 28px
+            }
+
+            h2 {
+                font-size: 24px
             }
 
             h6 {
@@ -856,9 +850,7 @@
         }
 
         .col,
-        .col-auto,
-        .col-lg-auto,
-        .col-sm-6 {
+        .col-auto {
             position: relative;
             width: 100%;
             min-height: 1px;
@@ -879,23 +871,6 @@
             flex: 0 0 auto;
             width: auto;
             max-width: none
-        }
-
-        @media (min-width:576px) {
-            .col-sm-6 {
-                -ms-flex: 0 0 50%;
-                flex: 0 0 50%;
-                max-width: 50%
-            }
-        }
-
-        @media (min-width:992px) {
-            .col-lg-auto {
-                -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
-                width: auto;
-                max-width: none
-            }
         }
 
         .d-block {
@@ -954,6 +929,7 @@
         }
 
         h1,
+        h2,
         h6 {
             margin-top: 0;
             margin-bottom: .5rem
@@ -966,6 +942,10 @@
 
         ul ul {
             margin-bottom: 0
+        }
+
+        strong {
+            font-weight: bolder
         }
 
         a {
@@ -991,7 +971,7 @@
     <noscript>
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Oswald:500%7CPoppins:200,300,300i,400,400i,600,600i%7CMaterial+Icons">
-    </noscript>
+        </noscript>
     <link rel="preload" href="css/vendor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="css/vendor.css"></noscript>
@@ -1002,9 +982,8 @@
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="../../../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    </noscript>
+        </noscript>
     <script>!function (n) { "use strict"; n.loadCSS || (n.loadCSS = function () { }); var o = loadCSS.relpreload = {}; if (o.support = function () { var e; try { e = n.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), o.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.addEventListener ? t.removeEventListener("load", a) : t.attachEvent && t.detachEvent("onload", a), t.setAttribute("onload", null), t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, o.poly = function () { if (!o.support()) for (var t = n.document.getElementsByTagName("link"), e = 0; e < t.length; e++) { var a = t[e]; "preload" !== a.rel || "style" !== a.getAttribute("as") || a.getAttribute("data-loadcss") || (a.setAttribute("data-loadcss", !0), o.bindMediaToggle(a)) } }, !o.support()) { o.poly(); var t = n.setInterval(o.poly, 500); n.addEventListener ? n.addEventListener("load", function () { o.poly(), n.clearInterval(t) }) : n.attachEvent && n.attachEvent("onload", function () { o.poly(), n.clearInterval(t) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : n.loadCSS = loadCSS }("undefined" != typeof global ? global : this);</script>
-    
     <link rel="apple-touch-icon" sizes="57x57" href="img/content/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/content/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/content/apple-icon-72x72.png">
@@ -1026,7 +1005,7 @@
 </head>
 
 <body data-barba="wrapper">
-   <svg class="spinner js-spinner d-lg-none d-block" width="65px" height="65px"
+    <svg class="spinner js-spinner d-lg-none d-block" width="65px" height="65px"
         viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
         <circle class="spinner__path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30">
         </circle>
@@ -1039,8 +1018,20 @@
             </svg></div>
     </div>
     <div class="project-backgrounds">
-        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/main_cover_photo.jpg"
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/main_cover_photo.jpg"
             data-background-for="1"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-2.jpg"
+            data-background-for="2"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-3.jpg"
+            data-background-for="3"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-4.jpg"
+            data-background-for="4"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-5.jpg"
+            data-background-for="5"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-6.jpg"
+            data-background-for="6"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-7.jpg"
+            data-background-for="7"></div>
         <div class="project-backgrounds__overlay overlay overlay_dark"></div>
     </div>
     <div class="preloader">
@@ -1111,7 +1102,7 @@
                         <div class="figure-property__content">
                             <ul class="figure-property__list">
                                 <li class="figure-property__item">
-                                    <div class="split-text">Pl. No. 91, Housing Board,<br>Yadav Nagar<br>Nagpur - 440026</div>
+                                    <div class="split-text">Pl. No. 91,<br>Housing board,<br>Nagpur - 440017</div>
                                 </li>
                             </ul>
                         </div>
@@ -1120,235 +1111,323 @@
             </div>
         </div>
     </header>
-    <main class="page-wrapper bg-light" id="js-smooth-scroll" data-barba="container" data-barba-namespace="light">
-        
-        <section class="section section-masthead section_pt" data-os-animation="data-os-animation">
+    <main class="page-wrapper" id="js-smooth-scroll" data-barba="container" data-barba-namespace="light">
+        <section class="section section-masthead section_pt section_pb" data-os-animation="data-os-animation">
             <div class="container-fluid">
                 <header class="row section-masthead__header">
                     <div class="col">
-                        <h1 class="split-chars">You are Meeting Rushabh Gedam</h1>
+                        <h1 class="split-chars">About Us</h1>
                         <div class="section__headline"></div>
+                        <h2 class="heading-light split-text"><strong>Rushabh is working on this page</strong></h2>
                     </div>
                 </header>
-                <div class="row section-masthead__properties">
-                    <div class="col-lg-auto col-sm-6 section-masthead__wrapper-property">
-                        <div class="figure-property">
-                            <div class="figure-property__wrapper-heading">
-                                <h6 class="split-text">Passion</h6>
-                            </div>
-                            <div class="figure-property__content">
-                                <ul class="figure-property__list">
-                                    <li class="figure-property__item">
-                                        <div class="split-text">Programming</div>
-                                    </li>
-                                </ul>
+            </div>
+        </section>
+        <section class="section section-image section_h-700 section_w-container-right"
+            data-art-parallax="data-art-parallax" data-art-parallax-factor="0.2">
+            <div class="lazy-bg art-parallax__bg" data-src="img/assets/coming-soon.jpg"></div>
+        </section>
+        <section class="section section-content bg-light section_pt section_pb" data-os-animation="data-os-animation">
+            <div class="container section-content__container">
+                <div class="row justify-content-between section-content__row">
+                    <header class="col-lg-5 section__header section-content__inner_header">
+                        <h2 class="split-chars">Worked over</h2>
+                        <div class="section__headline"></div>
+                    </header>
+                    <div class="col-lg-10 section-content__inner section-content__inner_text">
+                        <h3 class="split-text">We love to collaborate with ambitious brands to deliver better digital
+                            experience to the people.</h3>
+                    </div>
+                </div>
+                <div class="section-content__main-content">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 section-content__wrapper-item">
+                            <div class="figure-logo  bg-light-grey">
+                                <div class="lazy"><img data-src="img/assets/worked_on/android.png" src="#" alt></div>
+                                <div class="figure-logo__description">
+                                    <p>Native Android</p>
+                                    <div class="figure-logo__line"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-auto col-sm-6 section-masthead__wrapper-property">
-                        <div class="figure-property">
-                            <div class="figure-property__wrapper-heading">
-                                <h6 class="split-text">Fondness</h6>
-                            </div>
-                            <div class="figure-property__content">
-                                <ul class="figure-property__list">
-                                    <li class="figure-property__item">
-                                        <div class="split-text">Blogging</div>
-                                    </li>
-                                </ul>
+                        <div class="col-lg-4 col-md-6 section-content__wrapper-item">
+                            <div class="figure-logo  bg-light-grey">
+                                <div class="lazy"><img data-src="img/assets/worked_on/apple.png" src="#" alt></div>
+                                <div class="figure-logo__description">
+                                    <p>iOS</p>
+                                    <div class="figure-logo__line"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-auto col-sm-6 section-masthead__wrapper-property">
-                        <div class="figure-property">
-                            <div class="figure-property__wrapper-heading">
-                                <h6 class="split-text">Born</h6>
-                            </div>
-                            <div class="figure-property__content">
-                                <ul class="figure-property__list">
-                                    <li class="figure-property__item">
-                                        <div class="split-text">June 18 <sup>th</sup> 1998</div>
-                                    </li>
-                                </ul>
+                        <div class="col-lg-4 col-md-6 section-content__wrapper-item">
+                            <div class="figure-logo  bg-light-grey">
+                                <div class="lazy"><img data-src="img/assets/worked_on/hybrid.png" src="#" alt></div>
+                                <div class="figure-logo__description">
+                                    <p>Hybrid Application</p>
+                                    <div class="figure-logo__line"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-auto col-sm-6 section-masthead__wrapper-property">
-                        <div class="figure-property">
-                            <div class="figure-property__wrapper-heading">
-                                <h6 class="split-text">Interest</h6>
+                        <div class="col-lg-4 col-md-6 section-content__wrapper-item">
+                            <div class="figure-logo  bg-light-grey">
+                                <div class="lazy"><img data-src="img/assets/worked_on/react-native.png" src="#" alt></div>
+                                <div class="figure-logo__description">
+                                    <p>React Native</p>
+                                    <div class="figure-logo__line"></div>
+                                </div>
                             </div>
-                            <div class="figure-property__content">
-                                <ul class="figure-property__list">
-                                    <li class="figure-property__item">
-                                        <div class="split-text">Cyber Security (_Hacking_) </div>
-                                    </li>
-                                </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6 section-content__wrapper-item">
+                            <div class="figure-logo  bg-light-grey">
+                                <div class="lazy"><img data-src="img/assets/worked_on/react-native.png" src="#" alt></div>
+                                <div class="figure-logo__description">
+                                    <p>Java</p>
+                                    <div class="figure-logo__line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 section-content__wrapper-item">
+                            <div class="figure-logo  bg-light-grey">
+                                <div class="lazy"><img data-src="img/assets/worked_on/Firebase.png" src="#" alt></div>
+                                <div class="figure-logo__description">
+                                    <p>Firebase</p>
+                                    <div class="figure-logo__line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 section-content__wrapper-item">
+                            <div class="figure-logo  bg-light-grey">
+                                <div class="lazy"><img data-src="img/assets/worked_on/chatbot.jpg" src="#" alt></div>
+                                <div class="figure-logo__description">
+                                    <p>ChatBot</p>
+                                    <div class="figure-logo__line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 section-content__wrapper-item">
+                            <div class="figure-logo  bg-light-grey">
+                                <div class="lazy"><img data-src="img/assets/worked_on/DialogFlow.png" src="#" alt></div>
+                                <div class="figure-logo__description">
+                                    <p>DialogFlow</p>
+                                    <div class="figure-logo__line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 section-content__wrapper-item">
+                            <div class="figure-logo  bg-light-grey">
+                                <div class="lazy"><img data-src="img/assets/worked_on/ionic.jpg" src="#" alt></div>
+                                <div class="figure-logo__description">
+                                    <p>IONIC</p>
+                                    <div class="figure-logo__line"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="section section_h-800 section-masthead__background section-masthead__background_bottom section_h-900"
-                data-art-parallax="data-art-parallax" data-art-parallax-factor="-0.09">
-                <div class="art-parallax__bg lazy-bg" data-src="img/assets/main_cover_photo.jpg"></div>
-            </div>
         </section>
-        <section class="section section-content section_pt section_pb" data-os-animation="data-os-animation">
+        <!-- <section class="section section-content bg-light-grey section_pt section_pb"
+            data-os-animation="data-os-animation">
             <div class="container section-content__container">
                 <div class="row justify-content-between section-content__row">
-                    <header class="col-lg-4 section__header section-content__inner_header">
-                        <h2 class="split-chars">What I feel</h2>
+                    <header class="col-lg-5 section__header section-content__inner_header">
+                        <h2 class="split-chars">Team of creators</h2>
                         <div class="section__headline"></div>
                     </header>
-                    <div class="col-lg-8 section-content__inner section-content__inner_text">
-                        <h3 class="split-text">I believe that "It's better to feel the technology rather than just learning it".
-                            & the better feelings comes from the better User Interface.
+                    <div class="col-lg-6 section-content__inner section-content__inner_text">
+                        <h3 class="split-text">We are fostering a collaborative, team-based approach in order to
+                            cultivate the flow of nice creative ideas and let our team members unleash their creativity.
                         </h3>
                     </div>
                 </div>
+                <div class="section-content__main-content">
+                    <div class="row">
+                        <div class="col">
+                            <div class="grid grid_50 js-grid">
+                                <div class="col-lg-4 col-md-6 grid__item grid__item_50 grid__sizer js-grid__sizer">
+                                </div>
+                                <div class="col-lg-4 col-md-6 grid__item grid__item_50 js-grid__item">
+                                    <div class="figure-member figure-member_has-social">
+                                        <div class="figure-member__wrapper-img grayscale">
+                                            <div class="lazy"><img data-src="img/assets/sectionTeam/img-1.jpg" src="#"
+                                                    alt width="300" height="450"></div>
+                                            <div class="figure-member__social">
+                                                <ul class="social">
+                                                    <li class="social__item"><a class="fa fa-facebook-f" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-twitter" href="#"></a></li>
+                                                    <li class="social__item"><a class="fa fa-instagram" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-behance" href="#"></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="figure-member__overlay"></div>
+                                        </div>
+                                        <div class="figure-member__content">
+                                            <div class="figure-member__position">Founder</div>
+                                            <h4>Mark Graves</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 grid__item grid__item_50 js-grid__item">
+                                    <div class="figure-member figure-member_has-social">
+                                        <div class="figure-member__wrapper-img grayscale">
+                                            <div class="lazy"><img data-src="img/assets/sectionTeam/img-2.jpg" src="#"
+                                                    alt width="300" height="450"></div>
+                                            <div class="figure-member__social">
+                                                <ul class="social">
+                                                    <li class="social__item"><a class="fa fa-facebook-f" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-twitter" href="#"></a></li>
+                                                    <li class="social__item"><a class="fa fa-instagram" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-behance" href="#"></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="figure-member__overlay"></div>
+                                        </div>
+                                        <div class="figure-member__content">
+                                            <div class="figure-member__position">Art Director</div>
+                                            <h4>Cathy Porras</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 grid__item grid__item_50 js-grid__item">
+                                    <div class="figure-member figure-member_has-social">
+                                        <div class="figure-member__wrapper-img grayscale">
+                                            <div class="lazy"><img data-src="img/assets/sectionTeam/img-3.jpg" src="#"
+                                                    alt width="300" height="450"></div>
+                                            <div class="figure-member__social">
+                                                <ul class="social">
+                                                    <li class="social__item"><a class="fa fa-facebook-f" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-twitter" href="#"></a></li>
+                                                    <li class="social__item"><a class="fa fa-instagram" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-behance" href="#"></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="figure-member__overlay"></div>
+                                        </div>
+                                        <div class="figure-member__content">
+                                            <div class="figure-member__position">UI / UX Designer</div>
+                                            <h4>George Tailey</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 grid__item grid__item_50 js-grid__item">
+                                    <div class="figure-member figure-member_has-social">
+                                        <div class="figure-member__wrapper-img grayscale">
+                                            <div class="lazy"><img data-src="img/assets/sectionTeam/img-4.jpg" src="#"
+                                                    alt width="300" height="450"></div>
+                                            <div class="figure-member__social">
+                                                <ul class="social">
+                                                    <li class="social__item"><a class="fa fa-facebook-f" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-twitter" href="#"></a></li>
+                                                    <li class="social__item"><a class="fa fa-instagram" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-behance" href="#"></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="figure-member__overlay"></div>
+                                        </div>
+                                        <div class="figure-member__content">
+                                            <div class="figure-member__position">Product Manager</div>
+                                            <h4>Anabel Bowling</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 grid__item grid__item_50 js-grid__item">
+                                    <div class="figure-member figure-member_has-social">
+                                        <div class="figure-member__wrapper-img grayscale">
+                                            <div class="lazy"><img data-src="img/assets/sectionTeam/img-5.jpg" src="#"
+                                                    alt width="300" height="450"></div>
+                                            <div class="figure-member__social">
+                                                <ul class="social">
+                                                    <li class="social__item"><a class="fa fa-facebook-f" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-twitter" href="#"></a></li>
+                                                    <li class="social__item"><a class="fa fa-instagram" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-behance" href="#"></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="figure-member__overlay"></div>
+                                        </div>
+                                        <div class="figure-member__content">
+                                            <div class="figure-member__position">Senior Developer</div>
+                                            <h4>Reynaldo Hernandez</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 grid__item grid__item_50 js-grid__item">
+                                    <div class="figure-member figure-member_has-social">
+                                        <div class="figure-member__wrapper-img grayscale">
+                                            <div class="lazy"><img data-src="img/assets/sectionTeam/img-6.jpg" src="#"
+                                                    alt width="300" height="450"></div>
+                                            <div class="figure-member__social">
+                                                <ul class="social">
+                                                    <li class="social__item"><a class="fa fa-facebook-f" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-twitter" href="#"></a></li>
+                                                    <li class="social__item"><a class="fa fa-instagram" href="#"></a>
+                                                    </li>
+                                                    <li class="social__item"><a class="fa fa-behance" href="#"></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="figure-member__overlay"></div>
+                                        </div>
+                                        <div class="figure-member__content">
+                                            <div class="figure-member__position">Marketer</div>
+                                            <h4>Mark Newman</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-        <section class="section bg-blue-grey section_pt text-center">
-            <div class="slider swiper-container js-slider-images" data-autoplay-enabled="true"
-                data-centered-slides="true">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">Delivered Speech</div><img class="swiper-lazy"
-                                data-src="img/assets/img-1-1.jpg" src="#" alt>
-                        </div>
+        </section> -->
+        <footer class="footer container-fluid">
+            <div class="footer__area-primary">
+                <div class="row">
+                    <div class="col-lg-4 footer__col">
+                        <section class="widget widget_ruben_logo"><a class="logo" href="index.html">
+                                <div class="logo__text">Home</div>
+                            </a>
+                            <p>We are a multidisciplinary digital agency based in New York</p>
+                        </section>
                     </div>
-                    <!-- <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">Delivered Ethical Hacking Seminar</div><img class="swiper-lazy"
-                                data-src="img/assets/img-1-2.jpg" src="#" alt>
-                        </div>
-                    </div> -->
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">Cyber Awareness</div><img class="swiper-lazy"
-                                data-src="img/assets/image-6.jpg" src="#" alt>
-                        </div>
+                    <div class="col-lg-4 footer__col">
+                        <section class="widget widget_ruben_social">
+                            <ul class="social">
+                                <li class="social__item"><a class="fa fa-facebook-f" href="#"></a></li>
+                                <li class="social__item"><a class="fa fa-twitter" href="#"></a></li>
+                                <li class="social__item"><a class="fa fa-instagram" href="#"></a></li>
+                                <li class="social__item"><a class="fa fa-behance" href="#"></a></li>
+                            </ul>
+                        </section>
                     </div>
-                </div>
-                <div class="slider__progress">
-                    <div
-                        class="swiper-container slider__counter slider__counter_current js-slider-images-counter-current">
-                        <div class="swiper-wrapper"></div>
-                    </div>
-                    <div class="slider__progressbar js-slider-images-progress">
-                        <div class="slider__progressbar-fill"></div>
-                    </div>
-                    <div class="slider__counter slider__counter_total js-slider-images-counter-total">00</div>
-                </div>
-            </div>
-        </section>
-        <section class="section section_pb section-content section_pt" data-os-animation="data-os-animation">
-            <div class="container section-content__container">
-                <div class="row justify-content-between section-content__row">
-                    <header class="col-lg-4 section__header section-content__inner_header">
-                        <h2 class="split-chars">Impact of Various Technologies</h2>
-                        <div class="section__headline"></div>
-                    </header>
-                    <div class="col-lg-8 section-content__inner section-content__inner_text">
-                        <h3 class="split-text">More the technology advances, less the efforts required.
-                            Once a wise man said  
-                            <b>Lazy Programmer's are the best programmers</b>Because they used to code less but implements the functionality</b>.</h3>
+                    <div class="col-lg-4 footer__col">
+                        <section class="widget widget_ruben_contacts">
+                            <p>+91 83909 88114<br>+91 93599 99709</p>
+                            <p><a href="mailto:rushabhg358@gmail.com">rushabhg358@gmail.com</a></p>
+                        </section>
                     </div>
                 </div>
             </div>
-        </section>
-        <aside class="aside aside-counters section section_pt-small-small bg-dark color-white">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 aside-counters__wrapper-item">
-                        <div class="counter js-counter" data-counter-start="0" data-counter-target="6"
-                            data-counter-duration="4">
-                            <div class="counter__number js-counter__number">3</div>
-                            <div class="counter__label">Delivered Seminar's</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 aside-counters__wrapper-item">
-                        <div class="counter js-counter" data-counter-start="0" data-counter-target="23"
-                            data-counter-duration="4">
-                            <div class="counter__number js-counter__number">9</div>
-                            <div class="counter__label">Attended project competition</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 aside-counters__wrapper-item">
-                        <div class="counter js-counter" data-counter-start="0" data-counter-target="8"
-                            data-counter-duration="4">
-                            <div class="counter__number js-counter__number">8</div>
-                            <div class="counter__label">Own project</div>
-                        </div>
+            <div class="footer__area-secondary">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-12 footer__col">
+                        <section class="widget widget_ruben_copyright"><small>© 2020 Rushabh</a></small>
+                        </section>
                     </div>
                 </div>
             </div>
-        </aside>
-        <section class="section bg-dark color-white section_pt section_pb text-center">
-            <div class="slider swiper-container js-slider-images" data-slides-per-view="4" data-autoplay-enabled="true"
-                data-centered-slides="true">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">Working</div>
-                            <!-- <img class="swiper-lazy" data-src="img/assets/img-1-6.png" src="#" alt> -->
-                        </div>
-                    </div>
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">on</div>
-                            <!-- <img class="swiper-lazy" data-src="img/assets/img-1-7.png" src="#" alt> -->
-                        </div>
-                    </div>
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">this</div>
-                            <!-- <img class="swiper-lazy" data-src="img/assets/img-1-8.png" src="#" alt> -->
-                        </div>
-                    </div>
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">section</div>
-                            <!-- <img class="swiper-lazy" data-src="img/assets/img-1-9.png" src="#" alt> -->
-                        </div>
-                    </div>
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">!</div>
-                            <!-- <img class="swiper-lazy" data-src="img/assets/img-1-10.png" src="#" alt> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__progress">
-                    <div
-                        class="swiper-container slider__counter slider__counter_current js-slider-images-counter-current">
-                        <div class="swiper-wrapper"></div>
-                    </div>
-                    <div class="slider__progressbar js-slider-images-progress">
-                        <div class="slider__progressbar-fill"></div>
-                    </div>
-                    <div class="slider__counter slider__counter_total js-slider-images-counter-total">00</div>
-                </div>
-            </div>
-        </section>
-        <section class="section section section-cta section_pt section_pb text-center">
-            <div class="container">
-                <header class="row justify-content-center section__header">
-                    <div class="col-lg-8">
-                        <h2>Hire me !</h2>
-                        <p>If you are seeking someone to work with Hybrid Application as well as on Native Android Platform. Just connect with me <br></p>
-                    </div>
-                </header>
-                <div class="row section-cta__wrapper-button">
-                    <div class="col"><a class="button button button_solid button_dark"
-                            href="contacts.html">Contact me</a></div>
-                </div>
-            </div>
-        </section>
+        </footer>
     </main><canvas id="js-webgl"></canvas>
-
     <script src="js/vendor.js"></script>
     <script src="js/components.js"></script>
 </body>

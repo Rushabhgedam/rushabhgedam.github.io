@@ -348,21 +348,6 @@
             padding-bottom: 8px
         }
 
-        [data-art-parallax] {
-            position: relative;
-            overflow: hidden
-        }
-
-        .art-parallax__bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center center
-        }
-
         .preloader {
             position: fixed;
             top: 0;
@@ -534,7 +519,11 @@
         }
 
         .section_pt {
-            padding-top: 100
+            padding-top: 200px
+        }
+
+        .section_pb {
+            padding-bottom: 200px
         }
 
         .section__headline {
@@ -545,19 +534,13 @@
             margin-bottom: 10px
         }
 
-        .section_h-800 {
-            height: 800px;
-            max-height: 100vh
-        }
-
-        .section_h-900 {
-            height: 900px;
-            max-height: 100vh
-        }
-
         @media screen and (max-width:1200px) {
             .section_pt {
                 padding-top: 140px
+            }
+
+            .section_pb {
+                padding-bottom: 140px
             }
 
             .section__headline {
@@ -569,6 +552,10 @@
             .section_pt {
                 padding-top: 100px
             }
+
+            .section_pb {
+                padding-bottom: 100px
+            }
         }
 
         @media screen and (max-width:767px) {
@@ -576,16 +563,12 @@
                 padding-top: 80px
             }
 
+            .section_pb {
+                padding-bottom: 80px
+            }
+
             .section__headline {
                 max-width: 50px
-            }
-
-            .section_h-800 {
-                max-height: 70vh
-            }
-
-            .section_h-900 {
-                max-height: 70vh
             }
         }
 
@@ -617,17 +600,9 @@
             margin-bottom: -70px
         }
 
-        .section-masthead__background_bottom {
-            margin-top: 100px
-        }
-
         @media screen and (max-width:1200px) {
             .section-masthead__wrapper-property {
                 margin-right: 30px
-            }
-
-            .section-masthead__background_bottom {
-                margin-top: 80px
             }
         }
 
@@ -644,20 +619,11 @@
                 margin-top: 30px;
                 margin-bottom: -30px
             }
-
-            .section-masthead__background_bottom {
-                width: 100%;
-                margin-top: 80px
-            }
         }
 
         @media screen and (max-width:767px) {
             .section-masthead__header h1 {
                 margin-top: 40px
-            }
-
-            .section-masthead__background_bottom {
-                margin-top: 60px
             }
         }
 
@@ -991,7 +957,7 @@
     <noscript>
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Oswald:500%7CPoppins:200,300,300i,400,400i,600,600i%7CMaterial+Icons">
-    </noscript>
+        </noscript>
     <link rel="preload" href="css/vendor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="css/vendor.css"></noscript>
@@ -1002,7 +968,7 @@
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="../../../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    </noscript>
+        </noscript>
     <script>!function (n) { "use strict"; n.loadCSS || (n.loadCSS = function () { }); var o = loadCSS.relpreload = {}; if (o.support = function () { var e; try { e = n.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), o.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.addEventListener ? t.removeEventListener("load", a) : t.attachEvent && t.detachEvent("onload", a), t.setAttribute("onload", null), t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, o.poly = function () { if (!o.support()) for (var t = n.document.getElementsByTagName("link"), e = 0; e < t.length; e++) { var a = t[e]; "preload" !== a.rel || "style" !== a.getAttribute("as") || a.getAttribute("data-loadcss") || (a.setAttribute("data-loadcss", !0), o.bindMediaToggle(a)) } }, !o.support()) { o.poly(); var t = n.setInterval(o.poly, 500); n.addEventListener ? n.addEventListener("load", function () { o.poly(), n.clearInterval(t) }) : n.attachEvent && n.attachEvent("onload", function () { o.poly(), n.clearInterval(t) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : n.loadCSS = loadCSS }("undefined" != typeof global ? global : this);</script>
     
     <link rel="apple-touch-icon" sizes="57x57" href="img/content/apple-icon-57x57.png">
@@ -1039,8 +1005,20 @@
             </svg></div>
     </div>
     <div class="project-backgrounds">
-        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/main_cover_photo.jpg"
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/main_cover_photo.jpg"
             data-background-for="1"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-2.jpg"
+            data-background-for="2"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-3.jpg"
+            data-background-for="3"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-4.jpg"
+            data-background-for="4"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-5.jpg"
+            data-background-for="5"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-6.jpg"
+            data-background-for="6"></div>
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/projects/bg-7.jpg"
+            data-background-for="7"></div>
         <div class="project-backgrounds__overlay overlay overlay_dark"></div>
     </div>
     <div class="preloader">
@@ -1111,7 +1089,7 @@
                         <div class="figure-property__content">
                             <ul class="figure-property__list">
                                 <li class="figure-property__item">
-                                    <div class="split-text">Pl. No. 91, Housing Board,<br>Yadav Nagar<br>Nagpur - 440026</div>
+                                    <div class="split-text">Pl. No. 91,<br>Housing board,<br>Nagpur - 440017</div>
                                 </li>
                             </ul>
                         </div>
@@ -1120,13 +1098,13 @@
             </div>
         </div>
     </header>
-    <main class="page-wrapper bg-light" id="js-smooth-scroll" data-barba="container" data-barba-namespace="light">
+    <main class="page-wrapper" id="js-smooth-scroll" data-barba="container" data-barba-namespace="light">
         
-        <section class="section section-masthead section_pt" data-os-animation="data-os-animation">
+        <section class="section section-masthead section_pt section_pb" data-os-animation="data-os-animation">
             <div class="container-fluid">
                 <header class="row section-masthead__header">
                     <div class="col">
-                        <h1 class="split-chars">You are Meeting Rushabh Gedam</h1>
+                        <h1 class="split-chars">Technologies</h1>
                         <div class="section__headline"></div>
                     </div>
                 </header>
@@ -1134,12 +1112,24 @@
                     <div class="col-lg-auto col-sm-6 section-masthead__wrapper-property">
                         <div class="figure-property">
                             <div class="figure-property__wrapper-heading">
-                                <h6 class="split-text">Passion</h6>
+                                <h6 class="split-text">Web Design</h6>
                             </div>
                             <div class="figure-property__content">
                                 <ul class="figure-property__list">
                                     <li class="figure-property__item">
-                                        <div class="split-text">Programming</div>
+                                        <div class="split-text">UI / UX Design</div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Art Direction</div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Front-end</div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Back-end</div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Research & Analytics</div>
                                     </li>
                                 </ul>
                             </div>
@@ -1148,12 +1138,21 @@
                     <div class="col-lg-auto col-sm-6 section-masthead__wrapper-property">
                         <div class="figure-property">
                             <div class="figure-property__wrapper-heading">
-                                <h6 class="split-text">Fondness</h6>
+                                <h6 class="split-text">App Development</h6>
                             </div>
                             <div class="figure-property__content">
                                 <ul class="figure-property__list">
                                     <li class="figure-property__item">
-                                        <div class="split-text">Blogging</div>
+                                        <div class="split-text">React Native </div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Angular </div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Ionic </div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Java </div>
                                     </li>
                                 </ul>
                             </div>
@@ -1162,12 +1161,18 @@
                     <div class="col-lg-auto col-sm-6 section-masthead__wrapper-property">
                         <div class="figure-property">
                             <div class="figure-property__wrapper-heading">
-                                <h6 class="split-text">Born</h6>
+                                <h6 class="split-text">Content Creation</h6>
                             </div>
                             <div class="figure-property__content">
                                 <ul class="figure-property__list">
                                     <li class="figure-property__item">
-                                        <div class="split-text">June 18 <sup>th</sup> 1998</div>
+                                        <div class="split-text">Blogs</div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Posts</div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Software Guides</div>
                                     </li>
                                 </ul>
                             </div>
@@ -1176,12 +1181,21 @@
                     <div class="col-lg-auto col-sm-6 section-masthead__wrapper-property">
                         <div class="figure-property">
                             <div class="figure-property__wrapper-heading">
-                                <h6 class="split-text">Interest</h6>
+                                <h6 class="split-text">Video Production</h6>
                             </div>
                             <div class="figure-property__content">
                                 <ul class="figure-property__list">
                                     <li class="figure-property__item">
-                                        <div class="split-text">Cyber Security (_Hacking_) </div>
+                                        <div class="split-text">White Board Animation</div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Post Production</div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Motion Design</div>
+                                    </li>
+                                    <li class="figure-property__item">
+                                        <div class="split-text">Experimental Installations</div>
                                     </li>
                                 </ul>
                             </div>
@@ -1189,167 +1203,246 @@
                     </div>
                 </div>
             </div>
-            <div class="section section_h-800 section-masthead__background section-masthead__background_bottom section_h-900"
-                data-art-parallax="data-art-parallax" data-art-parallax-factor="-0.09">
-                <div class="art-parallax__bg lazy-bg" data-src="img/assets/main_cover_photo.jpg"></div>
-            </div>
         </section>
-        <section class="section section-content section_pt section_pb" data-os-animation="data-os-animation">
+        <!-- <section class="section section-content bg-light section_pt section_pb" data-os-animation="data-os-animation">
             <div class="container section-content__container">
                 <div class="row justify-content-between section-content__row">
-                    <header class="col-lg-4 section__header section-content__inner_header">
-                        <h2 class="split-chars">What I feel</h2>
+                    <header class="col-lg-5 section__header section-content__inner_header">
+                        <h2 class="split-chars">What clients say</h2>
                         <div class="section__headline"></div>
                     </header>
-                    <div class="col-lg-8 section-content__inner section-content__inner_text">
-                        <h3 class="split-text">I believe that "It's better to feel the technology rather than just learning it".
-                            & the better feelings comes from the better User Interface.
-                        </h3>
+                    <div class="col-lg-6 section-content__inner section-content__inner_text">
+                        <h3 class="split-text">We develop outstanding creative campaigns for our clients to make them,
+                            and keep them, the top brands in their respective markets.</h3>
+                    </div>
+                </div>
+                <div class="section-content__main-content">
+                    <div class="section-content__wrapper-item">
+                        <div class="slider-testimonials js-slider-testimonials">
+                            <div
+                                class="slider slider-header-testimonials swiper-container js-slider-testimonials__header">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide slider-header-testimonials__slide"><span>Martin
+                                            Harrington</span></div>
+                                    <div class="swiper-slide slider-header-testimonials__slide"><span>Iva Newton</span>
+                                    </div>
+                                    <div class="swiper-slide slider-header-testimonials__slide"><span>Aaron
+                                            Wilkerson</span></div>
+                                    <div class="swiper-slide slider-header-testimonials__slide"><span>Roger
+                                            Ramsey</span></div>
+                                    <div class="swiper-slide slider-header-testimonials__slide"><span>Cassio
+                                            Esfandiari</span></div>
+                                </div>
+                            </div>
+                            <div class="slider swiper-container js-slider-testimonials__items">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide slider-testimonials__slide">
+                                        <div class="slider-testimonials__wrapper-avatar"><img class="swiper-lazy"
+                                                data-src="img/assets/avatars/avatar-1.jpg" src="#" alt></div>
+                                        <div class="slider-testimonials__wrapper-text">
+                                            <blockquote>For all our design and production needs we have always trusted
+                                                Rushabh Agency for more than 4 years now. Exceptional workmanship,
+                                                commitment to client satisfaction and their timely delivery are what has
+                                                kept us stuck with them. They are cool guys too!</blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide slider-testimonials__slide">
+                                        <div class="slider-testimonials__wrapper-avatar"><img class="swiper-lazy"
+                                                data-src="img/assets/avatars/avatar-5.jpg" src="#" alt></div>
+                                        <div class="slider-testimonials__wrapper-text">
+                                            <blockquote>Set property addition building put likewise get. Of will at sell
+                                                well at as. Too want but tall nay like old. Removing yourself be in
+                                                answered he. Consider occasion get improved him she eat. Letter by
+                                                lively oh denote an.</blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide slider-testimonials__slide">
+                                        <div class="slider-testimonials__wrapper-avatar"><img class="swiper-lazy"
+                                                data-src="img/assets/avatars/avatar-3.jpg" src="#" alt></div>
+                                        <div class="slider-testimonials__wrapper-text">
+                                            <blockquote>Way building not get formerly her peculiar. Up uncommonly
+                                                prosperous sentiments simplicity acceptance to so. Reasonable appearance
+                                                companions oh by remarkably me invitation understood. Pursuit elderly
+                                                ask perhaps all.</blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide slider-testimonials__slide">
+                                        <div class="slider-testimonials__wrapper-avatar"><img class="swiper-lazy"
+                                                data-src="img/assets/avatars/avatar-4.jpg" src="#" alt></div>
+                                        <div class="slider-testimonials__wrapper-text">
+                                            <blockquote>Whole wound wrote at whose to style in. Figure ye innate former
+                                                do so we. Shutters but sir yourself provided you required his. So
+                                                neither related he am do believe. Nothing but you hundred had use
+                                                regular. Fat sportsmen arranging preferred can. Busy paid like is oh.
+                                                Dinner our ask talent her age hardly. Neglected collected an attention
+                                                listening do abilities.</blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide slider-testimonials__slide">
+                                        <div class="slider-testimonials__wrapper-avatar"><img class="swiper-lazy"
+                                                data-src="img/assets/avatars/avatar-2.jpg" src="#" alt></div>
+                                        <div class="slider-testimonials__wrapper-text">
+                                            <blockquote>At ourselves direction believing do he departure. Celebrated her
+                                                had sentiments understood are projection set. Possession ye no mr
+                                                unaffected remarkably at. Wrote house in never fruit up. Pasture imagine
+                                                my garrets an he. However distant she request behaved see nothing.
+                                                Talking settled at pleased an of me brother weather.</blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-testimonials__footer">
+                                    <div class="slider__dots js-slider-testimonials__dots">
+                                        <div class="slider__dot slider__dot_active"></div>
+                                        <div class="slider__dot"></div>
+                                        <div class="slider__dot"></div>
+                                        <div class="slider__dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="section bg-blue-grey section_pt text-center">
-            <div class="slider swiper-container js-slider-images" data-autoplay-enabled="true"
-                data-centered-slides="true">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">Delivered Speech</div><img class="swiper-lazy"
-                                data-src="img/assets/img-1-1.jpg" src="#" alt>
-                        </div>
-                    </div>
-                    <!-- <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">Delivered Ethical Hacking Seminar</div><img class="swiper-lazy"
-                                data-src="img/assets/img-1-2.jpg" src="#" alt>
-                        </div>
-                    </div> -->
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">Cyber Awareness</div><img class="swiper-lazy"
-                                data-src="img/assets/image-6.jpg" src="#" alt>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__progress">
-                    <div
-                        class="swiper-container slider__counter slider__counter_current js-slider-images-counter-current">
-                        <div class="swiper-wrapper"></div>
-                    </div>
-                    <div class="slider__progressbar js-slider-images-progress">
-                        <div class="slider__progressbar-fill"></div>
-                    </div>
-                    <div class="slider__counter slider__counter_total js-slider-images-counter-total">00</div>
-                </div>
+        </section> -->
+        <section class="section section-video section_pt section_pb" data-art-parallax="data-art-parallax"
+            data-art-parallax-factor="0.15"><a class="container section-video__link color-white mfp-iframe js-video"
+                href="https://www.youtube.com/watch?v=dog3lllNa9k">
+                <h2>Our work process</h2>
+                <div class="section-video__icon material-icons">play_arrow</div>
+            </a>
+            <div class="lazy-bg art-parallax__bg" data-src="img/assets/sectionVideo/bg-video.jpg">
+                <div class="overlay overlay_dark"></div>
             </div>
         </section>
-        <section class="section section_pb section-content section_pt" data-os-animation="data-os-animation">
+        <!-- <section class="section section-content bg-light-grey section_pt section_pb"
+            data-os-animation="data-os-animation">
             <div class="container section-content__container">
                 <div class="row justify-content-between section-content__row">
-                    <header class="col-lg-4 section__header section-content__inner_header">
-                        <h2 class="split-chars">Impact of Various Technologies</h2>
+                    <header class="col-lg-5 section__header section-content__inner_header">
+                        <h2 class="split-chars">Pricing Plans</h2>
                         <div class="section__headline"></div>
                     </header>
-                    <div class="col-lg-8 section-content__inner section-content__inner_text">
-                        <h3 class="split-text">More the technology advances, less the efforts required.
-                            Once a wise man said  
-                            <b>Lazy Programmer's are the best programmers</b>Because they used to code less but implements the functionality</b>.</h3>
+                    <div class="col-lg-6 section-content__inner section-content__inner_text">
+                        <h3 class="split-text">Two dear held mrs feet view her old fine. Bore can led than how has rank.
+                            Discovery any extensive has commanded direction.</h3>
+                    </div>
+                </div>
+                <div class="section-content__main-content">
+                    <div class="row">
+                        <div class="col-lg-4 section-content__wrapper-item">
+                            <div class="figure-pricing">
+                                <div class="figure-pricing__header">
+                                    <h4>Starter</h4>
+                                    <div class="figure-pricing__cost">
+                                        <div class="figure-pricing__cost-sign figure-pricing__cost-sign_before">$</div>
+                                        <div class="figure-pricing__amount">9</div>
+                                    </div>
+                                </div>
+                                <ul class="figure-pricing__features">
+                                    <li class="figure-pricing__feature">Free Setup</li>
+                                    <li class="figure-pricing__feature">Single Project</li>
+                                    <li class="figure-pricing__feature">1 Collaborator</li>
+                                    <li class="figure-pricing__feature">100 Mb in Cloud</li>
+                                    <li class="figure-pricing__feature">1 Integration</li>
+                                    <li class="figure-pricing__feature">10 Gb Bandwidth</li>
+                                </ul>
+                                <div class="figure-pricing__wrapper-button"><a
+                                        class="button button_fullwidth button_bordered button_dark" href="#">Select
+                                        Plan</a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 section-content__wrapper-item">
+                            <div class="figure-pricing figure-pricing_featured">
+                                <div class="figure-pricing__header">
+                                    <h4>Business</h4>
+                                    <div class="figure-pricing__cost">
+                                        <div class="figure-pricing__cost-sign figure-pricing__cost-sign_before">$</div>
+                                        <div class="figure-pricing__amount">19</div>
+                                    </div>
+                                </div>
+                                <ul class="figure-pricing__features">
+                                    <li class="figure-pricing__feature">Free Setup</li>
+                                    <li class="figure-pricing__feature">5 Projects</li>
+                                    <li class="figure-pricing__feature">15 Collaborator</li>
+                                    <li class="figure-pricing__feature">10 Gb in Cloud</li>
+                                    <li class="figure-pricing__feature">5 Integration</li>
+                                    <li class="figure-pricing__feature">50 Gb Bandwidth</li>
+                                    <li class="figure-pricing__feature">Priority Support</li>
+                                </ul>
+                                <div class="figure-pricing__wrapper-button"><a
+                                        class="button button_fullwidth button_solid button_dark" href="#">Select
+                                        Plan</a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 section-content__wrapper-item">
+                            <div class="figure-pricing">
+                                <div class="figure-pricing__header">
+                                    <h4>VIP</h4>
+                                    <div class="figure-pricing__cost">
+                                        <div class="figure-pricing__cost-sign figure-pricing__cost-sign_before">$</div>
+                                        <div class="figure-pricing__amount">29</div>
+                                    </div>
+                                </div>
+                                <ul class="figure-pricing__features">
+                                    <li class="figure-pricing__feature">Free Setup</li>
+                                    <li class="figure-pricing__feature">Unlimited Project</li>
+                                    <li class="figure-pricing__feature">Unlimited Collaborator</li>
+                                    <li class="figure-pricing__feature">50 Gb in Cloud</li>
+                                    <li class="figure-pricing__feature">Unlimited Integration</li>
+                                    <li class="figure-pricing__feature">1 Tb Bandwidth</li>
+                                    <li class="figure-pricing__feature">Premium Support</li>
+                                    <li class="figure-pricing__feature">Daily Reports</li>
+                                </ul>
+                                <div class="figure-pricing__wrapper-button"><a
+                                        class="button button_fullwidth button_bordered button_dark" href="#">Select
+                                        Plan</a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <aside class="aside aside-counters section section_pt-small-small bg-dark color-white">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 aside-counters__wrapper-item">
-                        <div class="counter js-counter" data-counter-start="0" data-counter-target="6"
-                            data-counter-duration="4">
-                            <div class="counter__number js-counter__number">3</div>
-                            <div class="counter__label">Delivered Seminar's</div>
-                        </div>
+        </section> -->
+        <footer class="footer container-fluid">
+            <div class="footer__area-primary">
+                <div class="row">
+                    <div class="col-lg-4 footer__col">
+                        <section class="widget widget_ruben_logo"><a class="logo" href="index.html">
+                                <div class="logo__text">Home</div>
+                            </a>
+                            <p>We are a multidisciplinary digital agency based in New York</p>
+                        </section>
                     </div>
-                    <div class="col-sm-4 aside-counters__wrapper-item">
-                        <div class="counter js-counter" data-counter-start="0" data-counter-target="23"
-                            data-counter-duration="4">
-                            <div class="counter__number js-counter__number">9</div>
-                            <div class="counter__label">Attended project competition</div>
-                        </div>
+                    <div class="col-lg-4 footer__col">
+                        <section class="widget widget_ruben_social">
+                            <ul class="social">
+                                <li class="social__item"><a class="fa fa-facebook-f" href="#"></a></li>
+                                <li class="social__item"><a class="fa fa-twitter" href="#"></a></li>
+                                <li class="social__item"><a class="fa fa-instagram" href="#"></a></li>
+                                <li class="social__item"><a class="fa fa-behance" href="#"></a></li>
+                            </ul>
+                        </section>
                     </div>
-                    <div class="col-sm-4 aside-counters__wrapper-item">
-                        <div class="counter js-counter" data-counter-start="0" data-counter-target="8"
-                            data-counter-duration="4">
-                            <div class="counter__number js-counter__number">8</div>
-                            <div class="counter__label">Own project</div>
-                        </div>
+                    <div class="col-lg-4 footer__col">
+                        <section class="widget widget_ruben_contacts">
+                            <p>+91 83909 88114<br>+91 93599 99709</p>
+                            <p><a href="mailto:rushabhg358@gmail.com">rushabhg358@gmail.com</a></p>
+                        </section>
                     </div>
                 </div>
             </div>
-        </aside>
-        <section class="section bg-dark color-white section_pt section_pb text-center">
-            <div class="slider swiper-container js-slider-images" data-slides-per-view="4" data-autoplay-enabled="true"
-                data-centered-slides="true">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">Working</div>
-                            <!-- <img class="swiper-lazy" data-src="img/assets/img-1-6.png" src="#" alt> -->
-                        </div>
+            <div class="footer__area-secondary">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-12 footer__col">
+                        <section class="widget widget_ruben_copyright"><small>© 2020 Rushabh</a></small>
+                        </section>
                     </div>
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">on</div>
-                            <!-- <img class="swiper-lazy" data-src="img/assets/img-1-7.png" src="#" alt> -->
-                        </div>
-                    </div>
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">this</div>
-                            <!-- <img class="swiper-lazy" data-src="img/assets/img-1-8.png" src="#" alt> -->
-                        </div>
-                    </div>
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">section</div>
-                            <!-- <img class="swiper-lazy" data-src="img/assets/img-1-9.png" src="#" alt> -->
-                        </div>
-                    </div>
-                    <div class="swiper-slide slider__slide">
-                        <div class="slider__slide-inner">
-                            <div class="slider__caption">!</div>
-                            <!-- <img class="swiper-lazy" data-src="img/assets/img-1-10.png" src="#" alt> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__progress">
-                    <div
-                        class="swiper-container slider__counter slider__counter_current js-slider-images-counter-current">
-                        <div class="swiper-wrapper"></div>
-                    </div>
-                    <div class="slider__progressbar js-slider-images-progress">
-                        <div class="slider__progressbar-fill"></div>
-                    </div>
-                    <div class="slider__counter slider__counter_total js-slider-images-counter-total">00</div>
                 </div>
             </div>
-        </section>
-        <section class="section section section-cta section_pt section_pb text-center">
-            <div class="container">
-                <header class="row justify-content-center section__header">
-                    <div class="col-lg-8">
-                        <h2>Hire me !</h2>
-                        <p>If you are seeking someone to work with Hybrid Application as well as on Native Android Platform. Just connect with me <br></p>
-                    </div>
-                </header>
-                <div class="row section-cta__wrapper-button">
-                    <div class="col"><a class="button button button_solid button_dark"
-                            href="contacts.html">Contact me</a></div>
-                </div>
-            </div>
-        </section>
+        </footer>
     </main><canvas id="js-webgl"></canvas>
 
     <script src="js/vendor.js"></script>
     <script src="js/components.js"></script>
 </body>
+
 </html>
