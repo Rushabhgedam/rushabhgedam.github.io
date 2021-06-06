@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>KnowledgeSuttra – Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="HandheldFriendly" content="true">
+    <style>
+        html {
+            font-size: 16px;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%
+        }
+
+        body {
+            position: relative;
+            width: 100%;
+            min-width: 320px;
+            font-family: Poppins, sans-serif;
+            background-color: #c5c6c9;
+            color: #333;
+            font-size: 100%;
+            line-height: 1.75;
+            overflow-x: hidden;
+            word-wrap: break-word
+        }
+
+        .container-fluid {
+            padding-left: 120px;
+            padding-right: 120px
+        }
+
+        .row {
+            margin-left: -25px;
+            margin-right: -25px
+        }
+
+        .col,
+        [class*=col-] {
+            padding-left: 25px;
+            padding-right: 25px
+        }
+
+        .page-wrapper {
+            z-index: 50
+        }
+
+        @media screen and (max-width:1400px) {
+            .container-fluid {
+                padding-left: 80px;
+                padding-right: 80px
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+            .container-fluid {
+                padding-left: 50px;
+                padding-right: 50px
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            .container-fluid {
+                padding-left: 30px;
+                padding-right: 30px
+            }
+
+            .row {
+                margin-left: -15px;
+                margin-right: -15px
+            }
+
+            .col,
+            [class*=col-] {
+                padding-left: 15px;
+                padding-right: 15px
+            }
+        }
+
+        .bg-light {
+            background-color: #f2f2f2
+        }
+
+        .bg-dark {
+            background-color: #181818
+        }
+
+        .bg-dark-2 {
+            background-color: #232323
+        }
+
+        .cursor {
+            position: fixed;
+            z-index: 10000;
+            display: none
+        }
+
+        .cursor__follower {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            overflow: hidden
+        }
+
+        .cursor__follower svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%
+        }
+
+        .cursor__follower svg #inner,
+        .cursor__follower svg #outter {
+            fill: none;
+            stroke-linecap: butt
+        }
+
+        .cursor__follower svg #inner {
+            stroke-width: 2px;
+            stroke: #888;
+            opacity: .6
+        }
+
+        .cursor__follower svg #outter {
+            stroke-width: 4px;
+            stroke: #c5c6c9
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 500;
+            padding-top: 70px
+        }
+
+        .header_fixed {
+            position: fixed
+        }
+
+        .header__burger {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            z-index: 600
+        }
+
+        .header__burger-line {
+            display: block;
+            width: 100%;
+            background-color: #333;
+            height: 2px;
+            margin: 4px 0;
+            -webkit-transform-origin: right center;
+            transform-origin: right center
+        }
+
+        .header__burger-line:nth-child(1) {
+            max-width: 40px
+        }
+
+        .header__burger-line:nth-child(2) {
+            max-width: 30px
+        }
+
+        .header__wrapper-overlay-menu {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 500;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .header__wrapper-menu {
+            display: flex;
+            align-items: flex-end;
+            padding: 120px 120px 40px;
+            width: 100%
+        }
+
+        .header__wrapper-overlay-widgets {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex: 1 1 auto;
+            padding: 120px 120px 60px
+        }
+
+        .header__wrapper-property {
+            margin-bottom: 50px;
+            font-size: 16px
+        }
+
+        .header__wrapper-property:last-of-type {
+            margin-bottom: 0
+        }
+
+        .header__overlay-menu-back {
+            position: absolute;
+            top: 70px;
+            left: 110px;
+            font-size: 45px !important;
+            color: #fff;
+            z-index: 600
+        }
+
+        .header__col-left {
+            position: relative
+        }
+
+        @media screen and (max-width:1400px) {
+            .header {
+                padding-top: 50px
+            }
+
+            .header__wrapper-menu {
+                padding: 80px 80px 40px
+            }
+
+            .header__wrapper-overlay-widgets {
+                padding: 80px 80px 60px
+            }
+
+            .header__overlay-menu-back {
+                top: 50px;
+                left: 70px
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+            .header {
+                padding-top: 40px
+            }
+
+            .header__wrapper-menu {
+                padding: 50px 50px 30px
+            }
+
+            .header__wrapper-overlay-widgets {
+                padding: 50px 50px 40px
+            }
+
+            .header__wrapper-property {
+                margin-bottom: 40px
+            }
+
+            .header__overlay-menu-back {
+                top: 40px;
+                left: 40px
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            .header__burger-line {
+                margin: 3px 0
+            }
+
+            .header__burger-line:nth-child(1) {
+                max-width: 30px
+            }
+
+            .header__burger-line:nth-child(2) {
+                max-width: 20px
+            }
+
+            .header__wrapper-menu {
+                padding: 0;
+                width: 100%;
+                padding: 50px 0
+            }
+
+            .header__wrapper-overlay-menu {
+                flex-wrap: wrap;
+                text-align: center;
+                padding: 50px 30px
+            }
+
+            .header__wrapper-overlay-widgets {
+                border-top: 1px solid rgba(214, 215, 217, .2);
+                background-color: initial;
+                padding: 50px 0
+            }
+
+            .header__overlay-menu-back {
+                top: 25px;
+                left: 25px;
+                font-size: 33px !important
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            .header {
+                padding-top: 20px
+            }
+        }
+
+        .logo {
+            display: block;
+            font-family: Oswald, sans-serif;
+            font-size: 16px;
+            line-height: 1.3;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #333
+        }
+
+        a.logo {
+            background-image: none
+        }
+
+        .figure-property {
+            width: 100%
+        }
+
+        .figure-property__list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .figure-property__item {
+            display: block;
+            padding-top: 8px;
+            padding-bottom: 8px
+        }
+
+        [data-art-parallax] {
+            position: relative;
+            overflow: hidden
+        }
+
+        .art-parallax__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 400
+        }
+
+        .preloader__curtain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%
+        }
+
+        .menu-overlay {
+            position: relative;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            max-width: 700px
+        }
+
+        .menu-overlay a {
+            background-image: none
+        }
+
+        .menu-overlay>li {
+            display: block
+        }
+
+        .menu-overlay>li>a {
+            display: block;
+            font-size: 54px;
+            line-height: 2;
+            font-weight: 600;
+            color: #fff
+        }
+
+        .menu-overlay>li>a span {
+            display: inline-block;
+            position: relative
+        }
+
+        .menu-overlay>li:not(.menu-item-has-children)>a span {
+            display: inline-block;
+            position: relative
+        }
+
+        .menu-overlay .sub-menu {
+            display: inline-flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            z-index: 100
+        }
+
+        .menu-overlay .sub-menu>li {
+            display: block
+        }
+
+        .menu-overlay .sub-menu>li>a {
+            display: block;
+            position: relative;
+            font-size: 33px;
+            line-height: 2.25;
+            font-weight: 600;
+            color: #fff
+        }
+
+        .menu-overlay .sub-menu>li>a span {
+            position: relative;
+            display: inline-block
+        }
+
+        @media screen and (max-width:1400px) {
+            .menu-overlay>li>a {
+                font-size: 43px;
+                line-height: 2
+            }
+
+            .menu-overlay .sub-menu>li>a {
+                font-size: 26px;
+                line-height: 2.33
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            .menu-overlay {
+                max-width: 100%
+            }
+
+            .menu-overlay>li>a {
+                font-size: 24px;
+                line-height: 2.5
+            }
+
+            .menu-overlay .sub-menu>li>a {
+                font-size: 19px;
+                line-height: 2.33
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: -1
+        }
+
+        .overlay_dark {
+            background-color: #181818;
+            opacity: .8;
+            mix-blend-mode: multiply
+        }
+
+        .project-backgrounds {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #232323;
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .project-backgrounds__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05)
+        }
+
+        .project-backgrounds__overlay {
+            z-index: 0 !important
+        }
+
+        [data-os-animation] {
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .section {
+            position: relative
+        }
+
+        .section_pt {
+            padding-top: 100
+        }
+
+        .section__headline {
+            display: block;
+            width: 80px;
+            height: 1px;
+            background-color: #181818;
+            margin-bottom: 10px
+        }
+
+        .section_h-800 {
+            height: 800px;
+            max-height: 100vh
+        }
+
+        .section_h-900 {
+            height: 900px;
+            max-height: 100vh
+        }
+
+        @media screen and (max-width:1200px) {
+            .section_pt {
+                padding-top: 140px
+            }
+
+            .section__headline {
+                max-width: 80px
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            .section_pt {
+                padding-top: 100px
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .section_pt {
+                padding-top: 80px
+            }
+
+            .section__headline {
+                max-width: 50px
+            }
+
+            .section_h-800 {
+                max-height: 70vh
+            }
+
+            .section_h-900 {
+                max-height: 70vh
+            }
+        }
+
+        .lazy-bg {
+            width: 100%;
+            height: 100%
+        }
+
+        .section-masthead__header {
+            max-width: 960px
+        }
+
+        .section-masthead__header h1 {
+            margin-top: 1.75em;
+            margin-bottom: .5em
+        }
+
+        .section-masthead__wrapper-property {
+            margin-right: 70px;
+            margin-bottom: 70px
+        }
+
+        .section-masthead__wrapper-property:last-of-type {
+            margin-right: 0
+        }
+
+        .section-masthead__properties {
+            margin-top: 70px;
+            margin-bottom: -70px
+        }
+
+        .section-masthead__background_bottom {
+            margin-top: 100px
+        }
+
+        @media screen and (max-width:1200px) {
+            .section-masthead__wrapper-property {
+                margin-right: 30px
+            }
+
+            .section-masthead__background_bottom {
+                margin-top: 80px
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            .section-masthead__wrapper-property {
+                margin-right: 0
+            }
+
+            .section-masthead__wrapper-property {
+                margin-bottom: 30px
+            }
+
+            .section-masthead__properties {
+                margin-top: 30px;
+                margin-bottom: -30px
+            }
+
+            .section-masthead__background_bottom {
+                width: 100%;
+                margin-top: 80px
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .section-masthead__header h1 {
+                margin-top: 40px
+            }
+
+            .section-masthead__background_bottom {
+                margin-top: 60px
+            }
+        }
+
+        .spinner {
+            position: fixed;
+            left: 120px;
+            bottom: calc(var(--fix-bar-vh, 30px) + 15px);
+            width: 30px;
+            height: 30px;
+            z-index: 10000;
+            -webkit-animation: rotator 1.2s ease-in-out infinite;
+            animation: rotator 1.2s ease-in-out infinite;
+            opacity: 0;
+            visibility: hidden
+        }
+
+        @-webkit-keyframes rotator {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+
+            100% {
+                -webkit-transform: rotate(270deg);
+                transform: rotate(270deg)
+            }
+        }
+
+        @keyframes rotator {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+
+            100% {
+                -webkit-transform: rotate(270deg);
+                transform: rotate(270deg)
+            }
+        }
+
+        .spinner__path {
+            stroke: #b0b0b0;
+            stroke-dasharray: 202;
+            stroke-dashoffset: 0;
+            -webkit-transform-origin: center;
+            transform-origin: center;
+            -webkit-animation: dash 1.2s ease-in-out infinite;
+            animation: dash 1.2s ease-in-out infinite
+        }
+
+        @-webkit-keyframes dash {
+            0% {
+                stroke-dashoffset: 202;
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+
+            50% {
+                stroke-dashoffset: 50.5;
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg)
+            }
+
+            100% {
+                stroke-dashoffset: 202;
+                -webkit-transform: rotate(450deg);
+                transform: rotate(450deg)
+            }
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dashoffset: 202;
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+
+            50% {
+                stroke-dashoffset: 50.5;
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg)
+            }
+
+            100% {
+                stroke-dashoffset: 202;
+                -webkit-transform: rotate(450deg);
+                transform: rotate(450deg)
+            }
+        }
+
+        @media screen and (max-width:1400px) {
+            .spinner {
+                left: 80px
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+            .spinner {
+                left: 30px
+            }
+        }
+
+        .split-chars,
+        .split-text {
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .color-white {
+            color: #fff !important
+        }
+
+        #js-webgl {
+            display: none;
+            width: 1px;
+            height: 1px
+        }
+
+        h1 {
+            font-family: Poppins, sans-serif
+        }
+
+        h6 {
+            font-family: Oswald, sans-serif
+        }
+
+        h1 {
+            font-size: 54px;
+            font-weight: 600;
+            line-height: 1.59
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            text-transform: uppercase
+        }
+
+        a {
+            color: inherit;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 0, #888 0, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 100px)
+        }
+
+        @media screen and (max-width:1400px) {
+            h1 {
+                font-size: 43px
+            }
+
+            h6 {
+                font-size: 16px
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            h1 {
+                font-size: 28px
+            }
+
+            h6 {
+                font-size: 16px
+            }
+        }
+
+        @-ms-viewport {
+            width: device-width
+        }
+
+        html {
+            box-sizing: border-box;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto
+        }
+
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        .col,
+        .col-auto,
+        .col-lg-auto,
+        .col-sm-6 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+
+        .col {
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            max-width: 100%
+        }
+
+        .col-auto {
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: auto;
+            max-width: none
+        }
+
+        @media (min-width:576px) {
+            .col-sm-6 {
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%
+            }
+        }
+
+        @media (min-width:992px) {
+            .col-lg-auto {
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+                width: auto;
+                max-width: none
+            }
+        }
+
+        .d-block {
+            display: block !important
+        }
+
+        @media (min-width:992px) {
+            .d-lg-none {
+                display: none !important
+            }
+        }
+
+        .justify-content-between {
+            -ms-flex-pack: justify !important;
+            justify-content: space-between !important
+        }
+
+        .align-items-center {
+            -ms-flex-align: center !important;
+            align-items: center !important
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        @-ms-viewport {
+            width: device-width
+        }
+
+        header,
+        main,
+        section {
+            display: block
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff
+        }
+
+        h1,
+        h6 {
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        ul {
+            margin-top: 0;
+            margin-bottom: 1rem
+        }
+
+        ul ul {
+            margin-bottom: 0
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+            vertical-align: middle
+        }
+
+        ::-webkit-file-upload-button {
+            font: inherit;
+            -webkit-appearance: button
+        }
+    </style>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css?family=Oswald:500%7CPoppins:200,300,300i,400,400i,600,600i%7CMaterial+Icons"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Oswald:500%7CPoppins:200,300,300i,400,400i,600,600i%7CMaterial+Icons">
+    </noscript>
+    <link rel="preload" href="css/vendor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/vendor.css">
+    </noscript>
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/main.css">
+    </noscript>
+    <link rel="preload" href="./stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../../../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+    <script>!function (n) { "use strict"; n.loadCSS || (n.loadCSS = function () { }); var o = loadCSS.relpreload = {}; if (o.support = function () { var e; try { e = n.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), o.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.addEventListener ? t.removeEventListener("load", a) : t.attachEvent && t.detachEvent("onload", a), t.setAttribute("onload", null), t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, o.poly = function () { if (!o.support()) for (var t = n.document.getElementsByTagName("link"), e = 0; e < t.length; e++) { var a = t[e]; "preload" !== a.rel || "style" !== a.getAttribute("as") || a.getAttribute("data-loadcss") || (a.setAttribute("data-loadcss", !0), o.bindMediaToggle(a)) } }, !o.support()) { o.poly(); var t = n.setInterval(o.poly, 500); n.addEventListener ? n.addEventListener("load", function () { o.poly(), n.clearInterval(t) }) : n.attachEvent && n.attachEvent("onload", function () { o.poly(), n.clearInterval(t) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : n.loadCSS = loadCSS }("undefined" != typeof global ? global : this);</script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/content/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/content/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/content/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/content/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/content/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/content/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/content/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/content/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/content/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/content/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/content/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/content/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/content/favicon-16x16.png">
+    <link rel="manifest" href="img/content/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/content/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/x-icon" href="img/content/favicon.ico">
+</head>
+
+<body data-barba="wrapper">
+    <svg class="spinner js-spinner d-lg-none d-block" width="65px" height="65px" viewBox="0 0 66 66"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle class="spinner__path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30">
+        </circle>
+    </svg>
+    <div class="cursor" id="js-cursor">
+        <div class="cursor__follower"><svg viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <circle id="inner" cx="50" cy="50" r="40" />
+                <circle id="outter" cx="50" cy="50" r="40" />
+            </svg></div>
+    </div>
+    <div class="project-backgrounds">
+        <div class="project-backgrounds__background lazy-bg" data-src="img/assets/main_cover_photo.jpg"
+            data-background-for="1"></div>
+        <div class="project-backgrounds__overlay overlay overlay_dark"></div>
+    </div>
+    <div class="preloader">
+        <div class="preloader__curtain bg-dark-2"></div>
+    </div>
+    <header class="header header_fixed container-fluid">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-auto header__col-left"><a class="logo" href="index.html">
+                    <div class="logo__text">Rushabh</div>
+                </a></div>
+            <div class="col-auto header__col-right">
+                <div class="header__burger" id="js-burger">
+                    <div class="header__burger-line"></div>
+                    <div class="header__burger-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="header__wrapper-overlay-menu">
+            <div class="header__overlay-menu-back material-icons" id="js-submenu-back">arrow_back</div>
+            <div class="header__wrapper-menu">
+                <ul class="menu-overlay js-menu-overlay">
+                    <li><a href="technologies.html" data-pjax-link="overlayMenu">
+                            <div class="menu-overlay__item-wrapper"><span class="split-chars">Technologies</span></div>
+                        </a></li>
+                    <li><a href="about.html" data-pjax-link="overlayMenu">
+                            <div class="menu-overlay__item-wrapper"><span class="split-chars">About</span></div>
+                        </a></li>
+                    <li><a href="contacts.html" data-pjax-link="overlayMenu">
+                            <div class="menu-overlay__item-wrapper"><span class="split-chars">Contacts</span></div>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="header__wrapper-overlay-widgets color-white bg-dark">
+                <div class="header__wrapper-property">
+                    <div class="figure-property">
+                        <div class="figure-property__wrapper-heading">
+                            <h6 class="split-text">Phones</h6>
+                        </div>
+                        <div class="figure-property__content">
+                            <ul class="figure-property__list">
+                                <li class="figure-property__item">
+                                    <div class="split-text">+91 83909 88114<br>+91 93599 99709</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__wrapper-property">
+                    <div class="figure-property">
+                        <div class="figure-property__wrapper-heading">
+                            <h6 class="split-text">E-mail</h6>
+                        </div>
+                        <div class="figure-property__content">
+                            <ul class="figure-property__list">
+                                <li class="figure-property__item">
+                                    <div class="split-text"><a
+                                            href="mailto:rushabhg358@gmail.com">rushabhg358@gmail.com</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__wrapper-property">
+                    <div class="figure-property">
+                        <div class="figure-property__wrapper-heading">
+                            <h6 class="split-text">Address</h6>
+                        </div>
+                        <div class="figure-property__content">
+                            <ul class="figure-property__list">
+                                <li class="figure-property__item">
+                                    <div class="split-text">Pl. No. 91, Housing Board,<br>Yadav Nagar<br>Nagpur - 440026
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="page-wrapper bg-light" id="js-smooth-scroll" data-barba="container" data-barba-namespace="light">
+
+        <section class="section section-masthead section_pt" data-os-animation="data-os-animation">
+            <div class="container-fluid">
+                <header class="row section-masthead__header">
+                    <div class="col">
+                        <h1 class="split-chars">Privacy Policy</h1>
+                        <div class="section__headline"></div>
+                    </div>
+                </header>
+            </div>
+        </section>
+        <section class="section section_pb section-content section_pt" data-os-animation="data-os-animation">
+            <div class="container section-content__container">
+                <div class="row justify-content-between section-content__row">
+                    <div class=" section-content__inner section-content__inner_text">
+                        <h3 class="split-text">
+                            At KnowledgeSuttra, accessible from rushabhgedam.github.io, one of our main priorities is
+                            the
+                            privacy of our visitors. This Privacy Policy document contains types of information that is
+                            collected and recorded by KnowledgeSuttra and how we use it.
+                            <br>
+                            If you have additional questions or require more information about our Privacy Policy, do
+                            not hesitate to contact us.
+                            <br>
+                            This Privacy Policy applies only to our online activities and is valid for visitors to our
+                            website with regards to the information that they shared and/or collect in KnowledgeSuttra.
+                            This policy is not applicable to any information collected offline or via channels other
+                            than this website. Our Privacy Policy was created with the help of the Privacy Policy
+                            Generator.
+                            <br>
+                            <h2>Consent</h2>
+                            <br>
+                            By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+                            <br>
+                            <h2>Information we collect</h2>
+                            The personal information that you are asked to provide, and the reasons why you are asked to
+                            provide it, will be made clear to you at the point we ask you to provide your personal
+                            information.
+                            <br>
+                            If you contact us directly, we may receive additional information about you such as your
+                            name, email address, phone number, the contents of the message and/or attachments you may
+                            send us, and any other information you may choose to provide.
+                            <br>
+                            When you register for an Account, we may ask for your contact information, including items
+                            such as name, company name, address, email address, and telephone number.
+                            <br>
+                            <h2>How we use your information</h2>
+                            We use the information we collect in various ways, including to:
+                            <br>
+                            Provide, operate, and maintain our website
+                            Improve, personalize, and expand our website
+                            Understand and analyze how you use our website
+                            Develop new products, services, features, and functionality
+                            Communicate with you, either directly or through one of our partners, including for customer
+                            service, to provide you with updates and other information relating to the website, and for
+                            marketing and promotional purposes
+                            Send you emails
+                            Find and prevent fraud
+                            <h2>Log Files</h2>
+                            KnowledgeSuttra follows a standard procedure of using log files. These files log visitors
+                            when
+                            they visit websites. All hosting companies do this and a part of hosting services'
+                            analytics. The information collected by log files include internet protocol (IP) addresses,
+                            browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages,
+                            and possibly the number of clicks. These are not linked to any information that is
+                            personally identifiable. The purpose of the information is for analyzing trends,
+                            administering the site, tracking users' movement on the website, and gathering demographic
+                            information.
+                            <br>
+                            <h2>Advertising Partners Privacy Policies</h2>
+                            You may consult this list to find the Privacy Policy for each of the advertising partners of
+                            KnowledgeSuttra.
+                            <br>
+                            Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web
+                            Beacons that are used in their respective advertisements and links that appear on Rushabh
+                            Gedam, which are sent directly to users' browser. They automatically receive your IP address
+                            when this occurs. These technologies are used to measure the effectiveness of their
+                            advertising campaigns and/or to personalize the advertising content that you see on websites
+                            that you visit.
+                            <br>
+                            Note that KnowledgeSuttra has no access to or control over these cookies that are used by
+                            third-party advertisers.
+                            <br>
+                            <h2>Third Party Privacy Policies</h2>
+                            KnowledgeSuttra's Privacy Policy does not apply to other advertisers or websites. Thus, we
+                            are
+                            advising you to consult the respective Privacy Policies of these third-party ad servers for
+                            more detailed information. It may include their practices and instructions about how to
+                            opt-out of certain options.
+                            <br>
+                            You can choose to disable cookies through your individual browser options. To know more
+                            detailed information about cookie management with specific web browsers, it can be found at
+                            the browsers' respective websites.
+                            <br>
+                            <h2>CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+                            Under the CCPA, among other rights, California consumers have the right to:
+                            <br>
+                            Request that a business that collects a consumer's personal data disclose the categories and
+                            specific pieces of personal data that a business has collected about consumers.
+                            <br>
+                            Request that a business delete any personal data about the consumer that a business has
+                            collected.
+                            <br>
+                            Request that a business that sells a consumer's personal data, not sell the consumer's
+                            personal data.
+                            <br>
+                            If you make a request, we have one month to respond to you. If you would like to exercise
+                            any of these rights, please contact us.
+                            <br>
+                            <h2>GDPR Data Protection Rights</h2>
+                            We would like to make sure you are fully aware of all of your data protection rights. Every
+                            user is entitled to the following:
+                            <br>
+                            The right to access – You have the right to request copies of your personal data. We may
+                            charge you a small fee for this service.
+                            <br>
+                            The right to rectification – You have the right to request that we correct any information
+                            you believe is inaccurate. You also have the right to request that we complete the
+                            information you believe is incomplete.
+                            <br>
+                            The right to erasure – You have the right to request that we erase your personal data, under
+                            certain conditions.
+                            <br>
+                            The right to restrict processing – You have the right to request that we restrict the
+                            processing of your personal data, under certain conditions.
+                            <br>
+                            The right to object to processing – You have the right to object to our processing of your
+                            personal data, under certain conditions.
+                            <br>
+                            The right to data portability – You have the right to request that we transfer the data that
+                            we have collected to another organization, or directly to you, under certain conditions.
+                            <br>
+                            If you make a request, we have one month to respond to you. If you would like to exercise
+                            any of these rights, please contact us.
+                            <br>
+                            <h2>Children's Information</h2>
+                            Another part of our priority is adding protection for children while using the internet. We
+                            encourage parents and guardians to observe, participate in, and/or monitor and guide their
+                            online activity.
+                            <br>
+                            KnowledgeSuttra does not knowingly collect any Personal Identifiable Information from
+                            children
+                            under the age of 13. If you think that your child provided this kind of information on our
+                            website, we strongly encourage you to contact us immediately and we will do our best efforts
+                            to promptly remove such information from our records.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="aside aside-counters section section_pt-small-small bg-dark color-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 aside-counters__wrapper-item">
+                        <div class="counter js-counter" data-counter-start="0" data-counter-target="6"
+                            data-counter-duration="4">
+                            <div class="counter__number js-counter__number">3</div>
+                            <div class="counter__label">Delivered Seminar's</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 aside-counters__wrapper-item">
+                        <div class="counter js-counter" data-counter-start="0" data-counter-target="23"
+                            data-counter-duration="4">
+                            <div class="counter__number js-counter__number">9</div>
+                            <div class="counter__label">Attended project competition</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 aside-counters__wrapper-item">
+                        <div class="counter js-counter" data-counter-start="0" data-counter-target="8"
+                            data-counter-duration="4">
+                            <div class="counter__number js-counter__number">8</div>
+                            <div class="counter__label">Own project</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section class="section bg-dark color-white section_pt section_pb text-center">
+            <div class="slider swiper-container js-slider-images" data-slides-per-view="4" data-autoplay-enabled="true"
+                data-centered-slides="true">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider__slide">
+                        <div class="slider__slide-inner">
+                            <div class="slider__caption">Responsive Mobile App Development</div>
+                            <lottie-player autoplay background="transparent" speed="0.7" loop style="width: 100%"
+                                mode="normal" src="https://assets2.lottiefiles.com/packages/lf20_NXqR2d.json">
+                            </lottie-player>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slider__slide">
+                        <div class="slider__slide-inner">
+                            <div class="slider__caption">SEO Friendly Web Development</div>
+                            <lottie-player autoplay background="transparent" speed="0.7" loop style="width: 100%"
+                                mode="normal" src="https://assets2.lottiefiles.com/packages/lf20_KmtjWu.json">
+                            </lottie-player>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slider__slide">
+                        <div class="slider__slide-inner">
+                            <div class="slider__caption">Node.js middleware's with Mongo DB</div>
+                            <lottie-player autoplay background="transparent" speed="0.7" loop style="width: 100%"
+                                mode="normal" src="https://assets4.lottiefiles.com/private_files/lf30_6e5k38rk.json">
+                            </lottie-player>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slider__slide">
+                        <div class="slider__slide-inner">
+                            <div class="slider__caption">Progressive Web App Deployment</div>
+                            <lottie-player autoplay background="transparent" speed="0.7" loop style="width: 100%"
+                                mode="normal" src="https://assets2.lottiefiles.com/temporary_files/yE2TbZ.json">
+                            </lottie-player>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slider__slide">
+                        <div class="slider__slide-inner">
+                            <div class="slider__caption">Chatbot Development</div>
+                            <lottie-player autoplay background="transparent" speed="0.7" loop style="width: 100%"
+                                mode="normal" src="https://assets4.lottiefiles.com/packages/lf20_g7zx4ni5.json">
+                            </lottie-player>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__progress">
+                    <div
+                        class="swiper-container slider__counter slider__counter_current js-slider-images-counter-current">
+                        <div class="swiper-wrapper"></div>
+                    </div>
+                    <div class="slider__progressbar js-slider-images-progress">
+                        <div class="slider__progressbar-fill"></div>
+                    </div>
+                    <div class="slider__counter slider__counter_total js-slider-images-counter-total">00</div>
+                </div>
+            </div>
+        </section>
+        <section class="section section section-cta section_pt section_pb text-center">
+            <div class="container">
+                <header class="row justify-content-center section__header">
+                    <div class="col-lg-8">
+                        <h2>Hire me !</h2>
+                        <p>If you are seeking someone to work with Hybrid Application as well as on Native Android
+                            Platform. Just connect with me <br></p>
+                    </div>
+                </header>
+                <div class="row section-cta__wrapper-button">
+                    <div class="col"><a class="button button button_solid button_dark" href="contacts.html">Contact
+                            me</a></div>
+                </div>
+            </div>
+        </section>
+    </main><canvas id="js-webgl"></canvas>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/components.js"></script>
+</body>
+
+</html>
